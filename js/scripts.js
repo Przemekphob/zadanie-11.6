@@ -75,16 +75,21 @@ $(function() {
 	}
 
 
-
-	var board = {
-    	name: 'Kanban Board',
-    	addColumn: function(column) {
-      		this.$element.append(column.$element);
-      		initSortable();
-    	},
-    	$element: $('#board .column-container')
+	function Board (selector, name) {
+	    this.name = name;
+	    this.$element = $(selector);
 	}
+ 
+	Board.prototype = {
+	    addColumn: function(column) {
+      	this.$element.append(column.$element);
+      	initSortable();
+    	}
+    	
+	};
 
+	var board = new Board("#board", "board 1");
+	
 
 
 	function initSortable() {
