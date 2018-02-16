@@ -72,7 +72,7 @@ $(function() {
 		removeCard: function() {
 			this.$element.remove();
 		}
-	}
+	};
 
 
 	function Board (selector, name) {
