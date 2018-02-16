@@ -1,0 +1,85 @@
+$orange: #f39c12;
+$sunflower: #f1c40f;
+$alizarin: #e74c3c;
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #3498db;
+}
+
+p, h1, h2, ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+.btn-delete, .add-card, .create-column {
+	border: 0;
+	border-radius: 5px;
+	margin: 5px;
+	font-size: 20px;
+
+
+}
+.btn-delete {
+	background-color: $sunflower;
+	padding: 5px 10px;
+
+}
+
+.add-card {
+	background-color: $orange;
+	padding: 10px 15px;
+}
+
+.create-column {
+	background-color: $alizarin;
+	margin: 50px;
+
+}
+
+.jumbotron {
+	background-image: url("../images/img.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+
+	.container {
+
+		h1 {
+			color: #FFF;
+		}
+		.board {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: row;
+
+				.column {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					color: #FFF;
+					flex: 1;
+					.column-card-list {
+						padding: 15px;
+						list-style: none;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						text-align: center;
+						flex-wrap: wrap;
+						flex-direction: row;
+						li {
+							padding: 15px;
+						}
+					}
+				}
+
+		}
+	}
+}
+
